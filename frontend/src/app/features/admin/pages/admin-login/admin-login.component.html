@@ -1,0 +1,14 @@
+<div class="admin-login-page">
+  <div class="admin-login-card">
+    <h2>Admin Login</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <div class="form-group">
+        <input type="email" formControlName="email" placeholder="Email" required />
+      </div>
+      <div class="form-group">
+        <input type="password" formControlName="password" placeholder="Password" required />
+      </div>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</div>

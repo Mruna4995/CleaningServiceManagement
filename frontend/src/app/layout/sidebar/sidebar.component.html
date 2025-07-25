@@ -1,0 +1,23 @@
+<div class="sidebar-container">
+  <ul class="nav-list">
+    <li class="section-title">🛡 Admin</li>
+
+    <li> <a routerLink="/admin/login" (click)="closeSidebar()">🔐 Admin Login</a></li>
+    <li><a routerLink="/admin/dashboard" routerLinkActive="active"(click)="closeSidebar()">📊 Admin Dashboard</a></li>
+
+    <li class="section-title"(click)="closeSidebar()">👋 User</li>
+    <li><a routerLink="/auth/login"(click)="closeSidebar()">🔐 Login</a></li>
+    <li><a routerLink="/auth/register"(click)="closeSidebar()">🆕 Register</a></li>
+
+
+    <li>
+  <a routerLink="/ourservices" routerLinkActive="active" (click)="closeSidebar()">🧹 Our Services</a>
+</li>
+  <li> <a routerLink="/auth/contact"(click)="closeSidebar()" > 📞Contact</a></li>
+
+
+
+
+
+  </ul>
+</div>

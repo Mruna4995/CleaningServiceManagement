@@ -1,0 +1,124 @@
+.admin-dashboard {
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #1a1a1a;
+  }
+
+  .table-container {
+    overflow-x: auto;
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 900px; // Ensure table scrolls on small viewports
+
+      th {
+        background-color: #161b75;
+        color: #fff;
+        padding: 12px;
+        text-align: left;
+        white-space: nowrap;
+      }
+
+      td {
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+        vertical-align: middle;
+        white-space: nowrap;
+      }
+
+      input {
+        padding: 6px 8px;
+        margin: 2px 4px 4px 0;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        width: 140px;
+      }
+
+      button {
+        margin: 4px 4px 4px 0;
+        padding: 6px 12px;
+        border: none;
+        border-radius: 6px;
+        font-size: 14px;
+        cursor: pointer;
+      }
+
+      .badge {
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: bold;
+  display: inline-block;
+  text-align: center;
+  min-width: 80px;
+}
+
+.badge-approved {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.badge-rejected {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.badge-pending {
+  background-color: #ffc107;
+  color: #000;
+}
+
+
+      .approve-button {
+        background-color: #28a745;
+        color: white;
+      }
+
+      .reject-button {
+        background-color: #dc3545;
+        color: white;
+      }
+
+      .assign-button {
+        background-color: #007bff;
+        color: white;
+      }
+    }
+  }
+
+  // 📱 Mobile adjustments
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 22px;
+    }
+
+    table {
+      font-size: 12px;
+
+      input {
+        width: 120px;
+        font-size: 12px;
+      }
+
+      button {
+        font-size: 12px;
+        padding: 4px 8px;
+      }
+
+      .badge {
+        font-size: 12px;
+        min-width: auto;
+      }
+    }
+  }
+}

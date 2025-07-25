@@ -1,0 +1,38 @@
+.staff-profile-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 60px); // Adjust if navbar height is different
+  padding: 1rem;
+  background-color: #fff;
+}
+
+.profile-card {
+  background-color: #2d3436;
+  color: #dfe6e9;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.profile-card h2 {
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+.profile-card .info-label {
+  font-weight: bold;
+  color: #00cec9;
+}
+
+.profile-card .info-value {
+  margin-bottom: 0.75rem;
+}
+
+.profile-card .logout-btn {
+  margin-top: 1.5rem;
+  width: 100%;
+}

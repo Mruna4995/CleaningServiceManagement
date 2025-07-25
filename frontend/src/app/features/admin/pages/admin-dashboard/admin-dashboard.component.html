@@ -1,0 +1,68 @@
+<div class="admin-dashboard">
+  <h2>All Cleaning Requests</h2>
+
+  <div *ngIf="requests.length === 0">
+    No requests found.
+  </div>
+
+  <div class="table-container" *ngIf="requests.length > 0">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>NAME</th>
+          <th>EMAIL</th>
+          <th>ROOM NO</th>
+          <th>SERVICE</th>
+          <th>STATUS</th>
+          <th>ACTION</th>
+          <th>ASSIGN</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let req of requests">
+          <td>{{ req.id }}</td>
+          <td>{{ req.name }}</td>
+          <td>{{ req.email }}</td>
+          <td>{{ req.roomNo }}</td>
+          <td>{{ req.serviceType }}</td>
+
+          <td>
+  <span
+    class="badge"
+    [ngClass]="{
+      'badge-pending': req.status === 'PENDING',
+      'badge-approved': req.status === 'APPROVED',
+      'badge-rejected': req.status === 'REJECTED'
+    }"
+  >
+    {{ req.status }}
+  </span>
+</td>
+
+          <td>
+
+            <button (click)="approve(req.id)">Approve</button>
+            <button (click)="reject(req.id)">Reject</button>
+          </td>
+<td>
+  <select [(ngModel)]="req.selectedStaff" class="form-control">
+    <option value="" disabled selected>Select Staff</option>
+    <option *ngFor="let staff of staffList" [ngValue]="staff">
+      {{ staff.name }} ({{ staff.email }})
+    </option>
+  </select>
+
+  <button
+    (click)="assignStaff(req.id, req.selectedStaff?.name || '', req.selectedStaff?.email || '')"
+  >
+    Assign
+  </button>
+</td>
+
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

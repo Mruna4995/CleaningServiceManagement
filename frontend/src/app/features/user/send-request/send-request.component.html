@@ -1,0 +1,59 @@
+<div class="request-form-wrapper">
+  <div class="form-card">
+    <h3 class="text-center mb-4">Send Cleaning Request</h3>
+
+    <form [formGroup]="requestForm" (ngSubmit)="submitRequest()">
+
+      <!-- Name -->
+      <div class="mb-3">
+        <label>Your Name</label>
+        <input type="text" class="form-control" formControlName="name" placeholder="Enter your name" />
+      </div>
+
+      <!-- Email -->
+      <div class="mb-3">
+        <label>Your Email</label>
+        <input type="email" class="form-control" formControlName="email" placeholder="Enter your email" />
+      </div>
+
+      <!-- Phone Number -->
+      <div class="mb-3">
+        <label>Phone Number</label>
+        <input type="text" class="form-control" formControlName="phone" placeholder="Enter your phone number" />
+      </div>
+
+      <!-- Room No -->
+      <div class="mb-3">
+        <label>Room Number</label>
+        <input type="text" class="form-control" formControlName="roomNo" />
+      </div>
+
+      <!-- Address -->
+      <div class="mb-3">
+        <label>Address</label>
+        <input type="text" class="form-control" formControlName="address" />
+      </div>
+
+      <!-- Google Map URL -->
+      <div class="mb-3">
+        <label>Google Map URL (optional)</label>
+        <input type="url" class="form-control" formControlName="locationUrl" placeholder="https://maps.google.com/..." />
+      </div>
+
+      <!-- Service Dropdown -->
+      <div class="mb-3">
+        <label>Select Service</label>
+        <select class="form-control" formControlName="serviceType">
+          <option value="" disabled selected>Select a service</option>
+          <option value="PEST Control">PEST Control</option>
+          <option value="House Keeping">House Keeping</option>
+          <option value="Office Cleaning">Office Cleaning</option>
+          <option value="Home Cleaning">Home Cleaning</option>
+          <option value="Kitchen Cleaning">Kitchen Cleaning</option>
+        </select>
+      </div>
+
+      <button class="btn btn-success w-100" type="submit" [disabled]="requestForm.invalid">Submit Request</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,68 @@
+.our-services-section {
+  padding: 40px 20px;
+  background-color: #f4faff;
+  text-align: center;
+
+  h2 {
+    font-size: 36px;
+    color: #003f7f;
+    margin-bottom: 30px;
+  }
+
+  .service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .service-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    width: 260px;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    h4 {
+      margin: 10px 0 8px;
+      font-size: 20px;
+      color: #222;
+    }
+
+    p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 12px;
+    }
+
+    .book-btn {
+      background-color: #b1372e;
+      color: white;
+      padding: 8px 16px;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+}

@@ -1,0 +1,13 @@
+<!-- Navbar -->
+<app-navbar></app-navbar>
+
+<!-- Sidebar -->
+<app-sidebar *ngIf="sidebarService.isVisible()" class="sidebar"></app-sidebar>
+
+
+<!-- Main Content -->
+<div class="main-content">
+
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
+</div>

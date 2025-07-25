@@ -1,0 +1,26 @@
+<div class="staff-profile-wrapper">
+  <div class="profile-card">
+    <h2>🧹 Staff Profile</h2>
+
+    <div class="info-label">Name:</div>
+    <div class="info-value">{{ name || '-' }}</div>
+
+    <div class="info-label">Email:</div>
+    <div class="info-value">{{ email || '-' }}</div>
+
+    <div class="info-label">Role:</div>
+    <div class="info-value">{{ role || 'staff' }}</div>
+
+    <hr />
+
+    <div class="info-label">Assigned Requests:</div>
+    <div class="info-value" [ngStyle]="{ color: assigned ? 'lightgreen' : 'tomato' }">
+      {{ assigned ? 'Yes' : 'No' }}
+    </div>
+
+    <div class="info-label">Joined On:</div>
+    <div class="info-value">{{ joinedDate || 'N/A' }}</div>
+
+    <button class="btn btn-danger logout-btn" (click)="logout()">Logout</button>
+  </div>
+</div>
